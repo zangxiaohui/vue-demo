@@ -2,7 +2,7 @@
   <main>
     <div class="topBar">
       <input class="inputbox" type="text" v-model="text" placeholder="do something..." @keyup.13="add">
-      <button class="addBtn" @click="add">add</button>
+      <button class="addBtn" @click="add" :disabled="text.length == 0">add</button>
     </div>
     <div class="scrollBox">
       <ul>
@@ -33,12 +33,14 @@
     },
     methods: {
       add () {
-        this.list.push({
-          value: this.text,
-          state: false,
-          edit: false
-        });
-        this.text = '';
+        if (this.text.length > 0) {
+          this.list.push({
+            value: this.text,
+            state: false,
+            edit: false
+          });
+          this.text = '';
+        }
       },
       remove (i) {
         this.list.splice(i, 1);
@@ -76,16 +78,16 @@
     padding: 0 4px;
   }
   .addBtn{
-    border: 1px solid #ccc;
+    border: 1px solid deepskyblue;
     height: 24px;
     background: #fff;
     width: 50px;
     margin-left: 12px;
-    color: #ccc;
-  }
-  .addBtn:active{
-    border-color: deepskyblue;
     color: deepskyblue;
+  }
+  .addBtn:disabled{
+    border-color: #ccc;
+    color: #ccc;
   }
   .scrollBox{
     flex: 1;
