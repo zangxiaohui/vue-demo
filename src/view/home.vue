@@ -94,6 +94,7 @@
     background: #f4f4f4;
     overflow-y: auto;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
   .scrollBox li{
     border: 1px solid #ccc;
