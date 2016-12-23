@@ -2,7 +2,7 @@
 
 module.exports = {
   port: '4000',
-  title: 'vue-dome',
+  title: 'vue-demo',
   vendor: [
     'vue',
     'vue-router'
