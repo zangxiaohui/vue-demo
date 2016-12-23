@@ -100,8 +100,10 @@
     margin: 6px;
     background: #fff;
     height: 32px;
+    line-height: 32px;
     display: flex;
     align-items: center;
+    vertical-align: middle;
     box-sizing: border-box;
     padding: 4px;
   }
@@ -121,6 +123,7 @@
     border-radius: 100%;
     position: relative;
     margin-right: 6px;
+    vertical-align: middle;
   }
   .checkbox:checked{
     border-color: deepskyblue;
