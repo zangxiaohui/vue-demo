@@ -10,7 +10,7 @@
           <div>
             <input type="checkbox" v-model="item.state" class="checkbox"/>
             {{`${index}. `}}
-            <input v-if="item.edit" v-model="item.value" @blur="item.edit = false" :autofocus="item.edit" />
+            <input v-if="item.edit" v-model="item.value" @blur="item.edit = false" />
             <span v-else  @click="item.edit = true">{{item.value}}</span>
           </div>
           <span @click="remove(index)">remove</span>
